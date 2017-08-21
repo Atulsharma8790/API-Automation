@@ -2,6 +2,7 @@ package ttn.kokaihop.api.apiTestCase;
 
 import static io.restassured.RestAssured.*;
 
+import java.util.ArrayList;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -18,8 +19,8 @@ public class apiTestCases {
 	public void login_api(){
 		
 		Response response = given().
-				param("email","atulsharma8790@gmail.com").
-				param("password", "abcd1234").
+				param("email","intelligrape@gmail.com").
+				param("password", "1234567a").
 				when().
 				post(fixedURL.fixed_URL+endPointURLs.login);
 		
@@ -33,6 +34,22 @@ public class apiTestCases {
 		System.out.println(token);
 		System.out.println(response.asString());
 				
+		
+	}
+	
+	@Test
+	public void get_cities_list(){
+		
+		ArrayList<String> cities = given().
+				when().
+				get("https://staging-kokaihop.herokuapp.com/v1/api/cities").
+				then().
+				contentType(ContentType.JSON).extract().
+				path("cities.name");
+		
+		System.out.println("Total cities are: "+cities.size());
+		for(int i=0;i<cities.size();i++)
+		System.out.println(cities.get(i).toString());
 		
 	}
 

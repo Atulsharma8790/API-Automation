@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="5211" started-at="2017-07-20T05:55:27Z" finished-at="2017-07-20T05:55:33Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="5211" started-at="2017-07-20T05:55:27Z" finished-at="2017-07-20T05:55:33Z">
+      <class name="com.api.apiPractice.apiFirst">
+        <test-method status="PASS" signature="case_13()[pri:0, instance:com.api.apiPractice.apiFirst@2b98378d]" name="case_13" duration-ms="5189" started-at="2017-07-20T11:25:27Z" finished-at="2017-07-20T11:25:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- case_13 -->
+      </class> <!-- com.api.apiPractice.apiFirst -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

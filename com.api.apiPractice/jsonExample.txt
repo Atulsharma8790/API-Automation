@@ -1,0 +1,52 @@
+{ "store": {
+    "book": [
+      { "category": "reference",
+        "author": "Nigel Rees",
+        "title": "Sayings of the Century",
+        "price": 8.95
+      },
+      { "category": "fiction",
+        "author": "Evelyn Waugh",
+        "title": "Sword of Honour",
+        "price": 12.99
+      },
+      { "category": "fiction",
+        "author": "Herman Melville",
+        "title": "Moby Dick",
+        "isbn": "0-553-21311-3",
+        "price": 8.99
+      },
+      { "category": "fiction",
+        "author": "J. R. R. Tolkien",
+        "title": "The Lord of the Rings",
+        "isbn": "0-395-19395-8",
+        "price": 22.99
+      }
+    ],
+    "bicycle": {
+        "color": "red",
+        "price": 19.95
+    }
+  }
+}
+
+
+
+$..author								All authors
+$.store.book[0].author					first author
+$.store.book[*].author					all authors
+$.store.book[1].author					Second author
+$.store.book[0]							First Book's Details
+$...title								All titles
+$...title[0]							First letter of title text of all books
+$.store..category						To get category list of all books
+$.store.book[0,1]						first two books
+$.store.book[2,3].author				author of 2nd and 3rd book
+$.store.book[1:]						All books after the 1st book
+$.store.book[1:].isbn					All isbn of books after the 1st book
+$.store.book[-1:]						Detail of book of the last one
+$.store.book[-2:]						Detail of book of the last two details
+$.store.book[?(@.isbn)]					Get only those books records which have 'isbn' field in the data
+$.store.book[?(@.category="reference")]	Get record with having category "reference"
+$.store.book[?(@.price>14)]				Get record with having price greater than 14
+

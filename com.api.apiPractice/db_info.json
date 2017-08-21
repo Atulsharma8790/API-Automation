@@ -1,0 +1,14 @@
+{
+  "posts": [
+    { 
+	"id": 1, 
+	"title": "json-server", 
+	"author": "typicode",
+	"info":{
+		"email":"test@test.com",
+		"phone":"1233545645",
+		"address":"Ontario, Canada"
+		}
+	}
+  ]
+}
